@@ -121,7 +121,7 @@ func TestCrioContainerByName(t *testing.T) {
 
 	containerName := fmt.Sprintf("test-crio-container-by-name-%d", os.Getpid())
 	containerID := fm.Crio().Run(framework.CrioRunArgs{
-		Image: "registry.k8s.io/pause:3.9",
+		Image: "registry.k8s.io/pause:3.10",
 		Name:  containerName,
 	})
 

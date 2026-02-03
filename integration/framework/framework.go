@@ -314,14 +314,14 @@ func (f *realFramework) ClientV2() *v2.Client {
 
 func (a dockerActions) RunPause() string {
 	return a.Run(DockerRunArgs{
-		Image: "registry.k8s.io/pause",
+		Image: "registry.k8s.io/pause:3.10",
 	})
 }
 
 // Run the specified command in a Docker busybox container.
 func (a dockerActions) RunBusybox(cmd ...string) string {
 	return a.Run(DockerRunArgs{
-		Image: "registry.k8s.io/busybox:1.27",
+		Image: "busybox:1.36",
 	}, cmd...)
 }
 
@@ -501,13 +501,13 @@ type crioContainerConfig struct {
 
 func (a *crioActions) RunPause() string {
 	return a.Run(CrioRunArgs{
-		Image: "registry.k8s.io/pause:3.9",
+		Image: "registry.k8s.io/pause:3.10",
 	})
 }
 
 func (a *crioActions) RunBusybox(cmd ...string) string {
 	return a.Run(CrioRunArgs{
-		Image: "registry.k8s.io/busybox:1.27",
+		Image: "busybox:1.36",
 	}, cmd...)
 }
 

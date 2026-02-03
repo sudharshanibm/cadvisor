@@ -112,7 +112,7 @@ runtime_type = "oci"
 runtime_root = "/run/crun"
 
 [crio.image]
-pause_image = "registry.k8s.io/pause:3.9"
+pause_image = "registry.k8s.io/pause:3.10"
 EOF
 
   # Also configure containers storage
